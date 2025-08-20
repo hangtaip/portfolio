@@ -3,11 +3,12 @@
 	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
-		"build": "tsc && pnpm build:css && pnpm copy:css",
+		"build": "tsc && pnpm build:css && pnpm copy:css && pnpm minify:html",
 		"build:css": "tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --minify",
+		"minify:html": "html-minifier-terser index.html -o ./dist/index.html --collapse-whitespace --remove-comments --remove-optional-tags --minify-css true --minify-js true",
 		"copy:css": "cpx \"src/css/*.css\" ./dist/css --ignore=main.css",
-		"dev": "pnpm build && tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --watch && node server.js",
-		"predeploy": "pnpm run build",
+		"dev": "node server.js",
+		"predeploy": "pnpm build",
 		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
