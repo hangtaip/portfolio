@@ -8,7 +8,7 @@
 		"copy:css": "cpx \"src/css/*.css\" ./dist/css --ignore=main.css",
 		"dev": "pnpm build && tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --watch && node server.js",
 		"predeploy": "pnpm run build",
-		"deploy": "gh-pages -d . -x dist/"
+		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@tailwindcss/cli": "^4.1.12",
