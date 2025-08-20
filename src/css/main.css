@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--bg-color);
+  --color-card-bg: var(--card-bg-color);
+  --color-text-dark: var(--text-dark);
+  --color-text-light: var(--text-light);
+  --color-theme-bg: var(--theme-bg);
+  --color-theme-icon: var(--theme-icon);
+  --color-text-gray: var(--text-gray);
+
+  --font-sans: Inter, sans-serif;
+}
+
+:root {
+  --bg-color: #f9fafb;
+  --bg-icon: #e5c728;
+  --card-bg-color: #ffffff;
+  --text-dark: #1f2937;
+  --text-light: #e5e7eb;
+  --text-gray: #4b5563;
+  --primary: #4f46e5;
+  --secondary: #818cf8;
+  --accent: #6ee7b7;
+  --theme-icon: var(--bg-icon);
+  --theme-bg: var(--text-light);
+}
+
+.dark {
+  --bg-color: #111827;
+  --bg-icon: #a8d3ff;
+  --card-bg-color: #1f2937;
+  --text-dark: #e5e7eb;
+  --text-light: #1f2937;
+  --text-gray: #f2f0ef;
+  --primary: #818cf8;
+  --secondary: #4f46e5;
+  --accent: #34d399;
+  --theme-icon: var(--bg-icon);
+  --theme-bg: var(--text-light);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

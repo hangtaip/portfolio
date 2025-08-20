@@ -1,0 +1,22 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "tsc && pnpm build:css && pnpm copy:css",
+		"build:css": "tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --minify",
+		"copy:css": "cpx \"src/css/*.css\" ./dist/css --ignore=main.css",
+		"dev": "pnpm build && tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --watch && node server.js",
+		"predeploy": "pnpm run build",
+		"deploy": "gh-pages -d . -x dist/"
+	},
+	"devDependencies": {
+		"@tailwindcss/cli": "^4.1.12",
+		"cpx2": "^8.0.0",
+		"express": "^5.1.0",
+		"gh-pages": "^6.3.0",
+		"tailwindcss": "^4.1.12",
+		"tsx": "^4.20.4",
+		"typescript": "^5.9.2"
+	}
+}

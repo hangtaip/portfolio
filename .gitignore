@@ -1,0 +1,7 @@
+dist/
+node_modules/
+.direnv
+.envrc
+__index.html
+
+*:Zone.Identifier
